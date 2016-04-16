@@ -60,8 +60,8 @@ export default class AlphabetaList extends React.Component {
         if (num < 0) {
             num = 0;
         }
-        if (num > 26) {
-            num = 26;
+        if (num > 27) {
+            num = 27;
         }
         let scroll = 0;
         if(num > 0) {
@@ -73,7 +73,6 @@ export default class AlphabetaList extends React.Component {
             for (var e in heightMsg) {
                 sumHeight += heightMsg[e];
             }
-
             for (obj in heightMsg) {
                 if (i == num) {
                     break;
@@ -89,6 +88,7 @@ export default class AlphabetaList extends React.Component {
                     j++;
                 }
             }
+
             if (Platform.OS === 'ios') {
                 if (bottomDistance < height) {
                     scroll = sumHeight - height + this.props.functionHeight + 20 + this.props.headHeight;

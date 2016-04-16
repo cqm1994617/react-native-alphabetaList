@@ -28,14 +28,16 @@ export default class Head extends React.Component {
 
     constructor(props) {
         super(props);
-    }
+    };
+
+    componentDidMount() {
+        this.props.changeHeadHeight(this.props.headHeight);
+    };
 
     render() {
         if (Platform.os === 'ios') {
             return (
-                <View style={[styles.head, {height: this.props.headHeight}]} onLayout={(e)=>{
-                    this.props.changeHeadHeight(e.nativeEvent.layout.height);
-                }}>
+                <View style={[styles.head, {height: this.props.headHeight}]} >
                     <View style={styles.searchBar}>
                         <TextInput style={[styles.search, {fontSize: 14}]} placeholder="搜索"/>
                         <TouchableOpacity style={styles.searchBtn}>
