@@ -73,6 +73,7 @@ export default class AlphabetaList extends React.Component {
             for (var e in heightMsg) {
                 sumHeight += heightMsg[e];
             }
+            let prev = 0;
             for (obj in heightMsg) {
                 if (i == num) {
                     break;

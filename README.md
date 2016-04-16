@@ -91,8 +91,11 @@ FriendList代表好友栏，图中我的朋友一栏
   headHeight={this.state.headHeight}
   functionHeight={this.state.functionHeight}
 />
+
 ```
 **scroll:**当前index的ScrollView，传递其this.refs
+
 **headHeight:**当前的头部栏高度
+
 **functionHeight:**当前状态栏高度
 
