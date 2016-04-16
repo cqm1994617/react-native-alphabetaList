@@ -5,6 +5,18 @@
 npm install
 ```
 
+
+# 示意图
+
+**IOS:**
+
+![image](https://github.com/cqm1994617/react-native-alphabetaList/blob/master/components/img/alpha-ios.gif)
+
+
+**Android:**
+
+![image](https://github.com/cqm1994617/react-native-alphabetaList/blob/master/components/img/alpha-android.gif)
+
 # 组件
 
 ## Head
