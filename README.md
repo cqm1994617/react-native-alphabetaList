@@ -26,7 +26,7 @@ Head组件代表头部栏
 ```
 <Head 
   headHeight={46} 
-  changeHeadHeight={(e)=>{this.changeHeadHeight(e)}} 
+  changeHeadHeight={(e)=>this.changeHeadHeight(e)} 
 />
 ```
 **headHeight:**设置Head的高度
@@ -43,7 +43,7 @@ Head组件代表头部栏
 FunctionList代表功能栏，就是图中群聊、标签、公众号的列表。
 
 ```
-<FunctionList changeFunctionHeight = {(e)=>{this.changeFunctionHeight(e)}} />
+<FunctionList changeFunctionHeight = {(e)=>this.changeFunctionHeight(e)} />
 ```
 **changeFunctionHeight:**改变index中state中功能栏高度的数值。
 
@@ -87,7 +87,7 @@ FriendList代表好友栏，图中我的朋友一栏
 
 ```
 <AlphabetaList 
-  scroll={this.refs.myScroll} 
+  scroll={()=>this.getScroll()} 
   headHeight={this.state.headHeight}
   functionHeight={this.state.functionHeight}
 />

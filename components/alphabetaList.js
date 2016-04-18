@@ -22,8 +22,8 @@ export default class AlphabetaList extends React.Component {
     static propTypes = {
         headHeight: React.PropTypes.number,
         functionHeight: React.PropTypes.number,
-        scroll: React.PropTypes.object
-    }
+        scroll: React.PropTypes.func
+    };
 
     constructor(props) {
         super(props);
@@ -96,10 +96,13 @@ export default class AlphabetaList extends React.Component {
                 }
             }
         }
-        this.props.scroll.scrollTo({x: 0, y: scroll, animated: false});
+
+
+        this.props.scroll().scrollTo({x: 0, y: scroll, animated: false});
     }
 
     render() {
+        console.log()
         return (
             <View onTouchStart={(e)=>{this.moveScroll(e)}}
                   onTouchMove={(e)=>{this.moveScroll(e)}} style={styles.rightRows}>

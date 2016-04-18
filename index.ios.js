@@ -250,13 +250,17 @@ class chatList extends Component {
         })
     };
 
+    getScroll() {
+        return this.refs.myScroll;
+    };
+
     render() {
         return (
             <View style={styles.containerIOS}>
-                <Head headHeight={46} changeHeadHeight={(e)=>{this.changeHeadHeight(e)}} />
+                <Head headHeight={46} changeHeadHeight={(e)=>this.changeHeadHeight(e)} />
                 <ScrollView bounces={false} ref="myScroll">
                     {/*FunctionList展现标签,群聊等功能列表*/}
-                    <FunctionList changeFunctionHeight = {(e)=>{this.changeFunctionHeight(e)}} />
+                    <FunctionList changeFunctionHeight = {(e)=>this.changeFunctionHeight(e)} />
 
                     {/*FriendList展现最近我的朋友*/}
                     <FriendList dataSource={this.state.dataSource2} />
@@ -264,7 +268,7 @@ class chatList extends Component {
                     {/*MainList展现通讯录*/}
                     <MainList dataSource={this.state.dataSource} />
                 </ScrollView>
-                <AlphabetaList scroll={this.refs.myScroll} headHeight={this.state.headHeight}
+                <AlphabetaList scroll={()=>this.getScroll()} headHeight={this.state.headHeight}
                                 functionHeight={this.state.functionHeight}/>
             </View>
         );
